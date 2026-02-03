@@ -9,6 +9,13 @@ on:
     # Run tests daily at 2 AM UTC
     - cron: '0 2 * * *'
 
+# Set permissions for the workflow
+permissions:
+  contents: read
+  issues: read
+  checks: write
+  pull-requests: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -58,12 +65,41 @@ jobs:
         retention-days: 30
         
     - name: Publish test results
-      uses: dorny/test-reporter@v1
+      uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: Test Results (${{ matrix.browser }} - Java ${{ matrix.java-version }})
+        name: junit-results-${{ matrix.browser }}-java${{ matrix.java-version }}
         path: target/surefire-reports/*.xml
-        reporter: java-junit
+        
+    - name: Generate test summary
+      if: always()
+      run: |
+        echo "## 🧪 Test Results Summary" >> $GITHUB_STEP_SUMMARY
+        echo "**Browser**: ${{ matrix.browser }}" >> $GITHUB_STEP_SUMMARY
+        echo "**Java Version**: ${{ matrix.java-version }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ -f "target/surefire-reports/TEST-org.test.selenium.SauceDemoTest.xml" ]; then
+          tests=$(grep -o 'tests="[0-9]*"' target/surefire-reports/TEST-org.test.selenium.SauceDemoTest.xml | grep -o '[0-9]*')
+          failures=$(grep -o 'failures="[0-9]*"' target/surefire-reports/TEST-org.test.selenium.SauceDemoTest.xml | grep -o '[0-9]*')
+          errors=$(grep -o 'errors="[0-9]*"' target/surefire-reports/TEST-org.test.selenium.SauceDemoTest.xml | grep -o '[0-9]*')
+          skipped=$(grep -o 'skipped="[0-9]*"' target/surefire-reports/TEST-org.test.selenium.SauceDemoTest.xml | grep -o '[0-9]*')
+          
+          echo "| Metric | Count |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| ✅ Total Tests | $tests |" >> $GITHUB_STEP_SUMMARY
+          echo "| ❌ Failures | $failures |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🚨 Errors | $errors |" >> $GITHUB_STEP_SUMMARY
+          echo "| ⏭️ Skipped | $skipped |" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "$failures" -eq 0 ] && [ "$errors" -eq 0 ]; then
+            echo "## 🎉 All Tests Passed!" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "## ❌ Some Tests Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+        else
+          echo "❌ No test results found" >> $GITHUB_STEP_SUMMARY
+        fi
         
     - name: Comment PR with results
       if: github.event_name == 'pull_request'
