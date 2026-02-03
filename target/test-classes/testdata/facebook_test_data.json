@@ -1,0 +1,89 @@
+{
+  "loginTests": [
+    {
+      "testName": "Valid Login Test",
+      "username": "vipin@gmail.com",
+      "password": "Vipin@1234",
+      "expectedResult": "success"
+    },
+    {
+      "testName": "Invalid Password Test",
+      "username": "vipin@gmail.com",
+      "password": "wrongpassword",
+      "expectedResult": "error",
+      "expectedErrorMessage": "The password you've entered is incorrect"
+    },
+    {
+      "testName": "Invalid Username Test",
+      "username": "nonexistent@gmail.com",
+      "password": "Vipin@1234",
+      "expectedResult": "error",
+      "expectedErrorMessage": "The email you've entered isn't connected to an account"
+    },
+    {
+      "testName": "Empty Fields Test",
+      "username": "",
+      "password": "",
+      "expectedResult": "error",
+      "expectedErrorMessage": "The email address or mobile number you entered isn't connected to an account"
+    }
+  ],
+  "registrationTests": [
+    {
+      "testName": "Valid Registration Test",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "password": "Test@1234",
+      "birthday": {
+        "day": "15",
+        "month": "Jan",
+        "year": "1990"
+      },
+      "gender": "male",
+      "expectedResult": "success"
+    },
+    {
+      "testName": "Invalid Email Registration Test",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "invalid-email",
+      "password": "Test@1234",
+      "birthday": {
+        "day": "20",
+        "month": "Feb",
+        "year": "1995"
+      },
+      "gender": "female",
+      "expectedResult": "error"
+    }
+  ],
+  "searchTests": [
+    {
+      "testName": "Search User Test",
+      "searchTerm": "John Doe",
+      "expectedResult": "results_found"
+    },
+    {
+      "testName": "Search Nonexistent User Test",
+      "searchTerm": "NonexistentUser12345",
+      "expectedResult": "no_results"
+    }
+  ],
+  "profileTests": [
+    {
+      "testName": "Update Profile Test",
+      "newFirstName": "Updated",
+      "newLastName": "Name",
+      "newBio": "This is my updated bio",
+      "expectedResult": "success"
+    }
+  ],
+  "commonTestData": {
+    "baseURL": "https://facebook.com",
+    "timeout": 10,
+    "retryCount": 3,
+    "browser": "chrome",
+    "headless": false
+  }
+}

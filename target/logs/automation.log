@@ -1,0 +1,180 @@
+2026-02-04 00:00:04.967 [main] ERROR org.main.selenium.reporting.Logger - ERROR in Sauce Demo login: Login failed: Expected condition failed: waiting for presence of element located by: By.id: user-name (tried for 10 second(s) with 500 milliseconds interval)
+2026-02-04 00:02:30.473 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vipinpandey/Library/Caches/JetBrains/IntelliJIdea2025.3/temp-testng-customsuite.xml
+
+2026-02-04 00:02:31.008 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.109 (resolved driver for Chrome 144)
+2026-02-04 00:02:31.030 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/vipinpandey/.cache/selenium/chromedriver/mac-x64/144.0.7559.109/chromedriver
+2026-02-04 00:02:32.872 [main] INFO  org.main.selenium.reporting.Logger - Attempting to login to Sauce Demo with username: standard_user
+2026-02-04 00:02:43.344 [main] ERROR org.main.selenium.reporting.Logger - ERROR in Sauce Demo login: Login failed: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id="user-name"] (tried for 10 second(s) with 500 milliseconds interval)
+2026-02-04 00:05:20.161 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vipinpandey/Library/Caches/JetBrains/IntelliJIdea2025.3/temp-testng-customsuite.xml
+
+2026-02-04 00:05:20.702 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.109 (resolved driver for Chrome 144)
+2026-02-04 00:05:20.723 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/vipinpandey/.cache/selenium/chromedriver/mac-x64/144.0.7559.109/chromedriver
+2026-02-04 00:05:22.546 [main] INFO  org.main.selenium.reporting.Logger - Navigating to sauce Demo
+2026-02-04 00:05:22.993 [main] INFO  org.main.selenium.reporting.Logger - Attempting to login to Sauce Demo with username: standard_user
+2026-02-04 00:05:23.291 [main] INFO  org.main.selenium.reporting.Logger - Entered username
+2026-02-04 00:05:23.410 [main] INFO  org.main.selenium.reporting.Logger - Entered password
+2026-02-04 00:05:23.556 [main] INFO  org.main.selenium.reporting.Logger - Clicked login button
+2026-02-04 00:05:23.597 [main] INFO  org.main.selenium.reporting.Logger - Login verification successful
+2026-02-04 00:06:13.225 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vipinpandey/Library/Caches/JetBrains/IntelliJIdea2025.3/temp-testng-customsuite.xml
+
+2026-02-04 00:06:13.772 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.109 (resolved driver for Chrome 144)
+2026-02-04 00:06:13.792 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/vipinpandey/.cache/selenium/chromedriver/mac-x64/144.0.7559.109/chromedriver
+2026-02-04 00:06:15.549 [main] INFO  org.main.selenium.reporting.Logger - Navigating to sauce Demo
+2026-02-04 00:06:15.977 [main] INFO  org.main.selenium.reporting.Logger - Attempting to login to Sauce Demo with username: standard_user
+2026-02-04 00:06:16.247 [main] INFO  org.main.selenium.reporting.Logger - Entered username
+2026-02-04 00:06:16.347 [main] INFO  org.main.selenium.reporting.Logger - Entered password
+2026-02-04 00:06:16.466 [main] INFO  org.main.selenium.reporting.Logger - Clicked login button
+2026-02-04 00:06:16.522 [main] INFO  org.main.selenium.reporting.Logger - Login verification successful
+2026-02-04 00:06:16.522 [main] INFO  org.main.selenium.reporting.Logger - Starting add to cart and checkout process
+2026-02-04 00:06:16.603 [main] INFO  org.main.selenium.reporting.Logger - Clicked on backpack product
+2026-02-04 00:06:16.690 [main] INFO  org.main.selenium.reporting.Logger - Added backpack to cart
+2026-02-04 00:06:16.708 [main] INFO  org.main.selenium.reporting.Logger - Cart badge displayed - item added successfully
+2026-02-04 00:06:16.796 [main] INFO  org.main.selenium.reporting.Logger - Navigated to cart page
+2026-02-04 00:06:27.265 [main] ERROR org.main.selenium.reporting.Logger - ERROR in Add to cart checkout: Checkout process failed: Expected condition failed: waiting for presence of element located by: By.id: checkout (tried for 10 second(s) with 500 milliseconds interval)
+2026-02-04 00:09:21.174 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vipinpandey/Library/Caches/JetBrains/IntelliJIdea2025.3/temp-testng-customsuite.xml
+
+2026-02-04 00:09:21.710 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.109 (resolved driver for Chrome 144)
+2026-02-04 00:09:21.732 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/vipinpandey/.cache/selenium/chromedriver/mac-x64/144.0.7559.109/chromedriver
+2026-02-04 00:09:23.642 [main] INFO  org.main.selenium.reporting.Logger - Navigating to sauce Demo
+2026-02-04 00:09:24.087 [main] INFO  org.main.selenium.reporting.Logger - Attempting to login to Sauce Demo with username: standard_user
+2026-02-04 00:09:24.397 [main] INFO  org.main.selenium.reporting.Logger - Entered username
+2026-02-04 00:09:24.507 [main] INFO  org.main.selenium.reporting.Logger - Entered password
+2026-02-04 00:09:24.660 [main] INFO  org.main.selenium.reporting.Logger - Clicked login button
+2026-02-04 00:09:24.696 [main] INFO  org.main.selenium.reporting.Logger - Login verification successful
+2026-02-04 00:09:24.696 [main] INFO  org.main.selenium.reporting.Logger - Starting add to cart and checkout process
+2026-02-04 00:09:24.804 [main] INFO  org.main.selenium.reporting.Logger - Clicked on backpack product
+2026-02-04 00:09:24.880 [main] INFO  org.main.selenium.reporting.Logger - Added backpack to cart
+2026-02-04 00:09:24.897 [main] INFO  org.main.selenium.reporting.Logger - Cart badge displayed - item added successfully
+2026-02-04 00:09:24.993 [main] INFO  org.main.selenium.reporting.Logger - Navigated to cart page
+2026-02-04 00:09:35.383 [main] ERROR org.main.selenium.reporting.Logger - ERROR in Add to cart checkout: Checkout process failed: Expected condition failed: waiting for presence of element located by: By.id: checkout (tried for 10 second(s) with 500 milliseconds interval)
+2026-02-04 00:17:59.995 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vipinpandey/Library/Caches/JetBrains/IntelliJIdea2025.3/temp-testng-customsuite.xml
+
+2026-02-04 00:18:00.530 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.109 (resolved driver for Chrome 144)
+2026-02-04 00:18:00.552 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/vipinpandey/.cache/selenium/chromedriver/mac-x64/144.0.7559.109/chromedriver
+2026-02-04 00:18:02.535 [main] INFO  org.main.selenium.reporting.Logger - Navigating to sauce Demo
+2026-02-04 00:18:03.452 [main] INFO  org.main.selenium.reporting.Logger - Attempting to login to Sauce Demo with username: standard_user
+2026-02-04 00:18:03.733 [main] INFO  org.main.selenium.reporting.Logger - Entered username
+2026-02-04 00:18:03.863 [main] INFO  org.main.selenium.reporting.Logger - Entered password
+2026-02-04 00:18:03.996 [main] INFO  org.main.selenium.reporting.Logger - Clicked login button
+2026-02-04 00:18:04.037 [main] INFO  org.main.selenium.reporting.Logger - Login verification successful
+2026-02-04 00:18:04.037 [main] INFO  org.main.selenium.reporting.Logger - Starting add to cart and checkout process
+2026-02-04 00:18:04.128 [main] INFO  org.main.selenium.reporting.Logger - Clicked on backpack product
+2026-02-04 00:18:04.198 [main] INFO  org.main.selenium.reporting.Logger - Added backpack to cart
+2026-02-04 00:18:04.219 [main] INFO  org.main.selenium.reporting.Logger - Cart badge displayed - item added successfully
+2026-02-04 00:18:14.668 [main] ERROR org.main.selenium.reporting.Logger - ERROR in Add to cart checkout: Checkout process failed: Expected condition failed: waiting for presence of element located by: By.xpath: //span[@class = 'shopping-cart-link'] (tried for 10 second(s) with 500 milliseconds interval)
+2026-02-04 00:20:14.251 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.109 (resolved driver for Chrome 144)
+2026-02-04 00:20:14.280 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/vipinpandey/.cache/selenium/chromedriver/mac-x64/144.0.7559.109/chromedriver
+2026-02-04 00:20:16.721 [main] INFO  org.main.selenium.reporting.Logger - Navigating to sauce Demo
+2026-02-04 00:20:17.191 [main] INFO  org.main.selenium.reporting.Logger - Attempting to login to Sauce Demo with username: standard_user
+2026-02-04 00:20:17.600 [main] INFO  org.main.selenium.reporting.Logger - Entered username
+2026-02-04 00:20:17.729 [main] INFO  org.main.selenium.reporting.Logger - Entered password
+2026-02-04 00:20:17.928 [main] INFO  org.main.selenium.reporting.Logger - Clicked login button
+2026-02-04 00:20:17.971 [main] INFO  org.main.selenium.reporting.Logger - Login verification successful
+2026-02-04 00:20:17.972 [main] INFO  org.main.selenium.reporting.Logger - Starting add to cart and checkout process
+2026-02-04 00:20:18.133 [main] INFO  org.main.selenium.reporting.Logger - Clicked on backpack product
+2026-02-04 00:20:18.225 [main] INFO  org.main.selenium.reporting.Logger - Added backpack to cart
+2026-02-04 00:20:18.244 [main] INFO  org.main.selenium.reporting.Logger - Cart badge displayed - item added successfully
+2026-02-04 00:20:28.624 [main] ERROR org.main.selenium.reporting.Logger - ERROR in Add to cart checkout: Checkout process failed: Expected condition failed: waiting for presence of element located by: By.xpath: //span[@class = 'shopping-cart-link'] (tried for 10 second(s) with 500 milliseconds interval)
+2026-02-04 00:20:59.050 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.109 (resolved driver for Chrome 144)
+2026-02-04 00:20:59.077 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/vipinpandey/.cache/selenium/chromedriver/mac-x64/144.0.7559.109/chromedriver
+2026-02-04 00:21:01.493 [main] INFO  org.main.selenium.reporting.Logger - Navigating to sauce Demo
+2026-02-04 00:21:01.640 [main] INFO  org.main.selenium.reporting.Logger - Attempting to login to Sauce Demo with username: standard_user
+2026-02-04 00:21:02.290 [main] INFO  org.main.selenium.reporting.Logger - Entered username
+2026-02-04 00:21:02.457 [main] INFO  org.main.selenium.reporting.Logger - Entered password
+2026-02-04 00:21:02.634 [main] INFO  org.main.selenium.reporting.Logger - Clicked login button
+2026-02-04 00:21:02.686 [main] INFO  org.main.selenium.reporting.Logger - Login verification successful
+2026-02-04 00:21:02.686 [main] INFO  org.main.selenium.reporting.Logger - Starting add to cart and checkout process
+2026-02-04 00:21:02.838 [main] INFO  org.main.selenium.reporting.Logger - Clicked on backpack product
+2026-02-04 00:21:02.948 [main] INFO  org.main.selenium.reporting.Logger - Added backpack to cart
+2026-02-04 00:21:02.967 [main] INFO  org.main.selenium.reporting.Logger - Cart badge displayed - item added successfully
+2026-02-04 00:21:03.064 [main] INFO  org.main.selenium.reporting.Logger - Navigated to cart page
+2026-02-04 00:21:03.159 [main] INFO  org.main.selenium.reporting.Logger - Clicked checkout button
+2026-02-04 00:21:03.284 [main] INFO  org.main.selenium.reporting.Logger - Entered first name
+2026-02-04 00:21:03.386 [main] INFO  org.main.selenium.reporting.Logger - Entered last name
+2026-02-04 00:21:03.470 [main] INFO  org.main.selenium.reporting.Logger - Entered postal code
+2026-02-04 00:21:03.580 [main] INFO  org.main.selenium.reporting.Logger - Clicked continue button
+2026-02-04 00:21:03.623 [main] INFO  org.main.selenium.reporting.Logger - Checkout overview page displayed
+2026-02-04 00:21:03.667 [main] INFO  org.main.selenium.reporting.Logger - Total price displayed: Total: $32.39
+2026-02-04 00:21:03.668 [main] INFO  org.main.selenium.reporting.Logger - Finishing checkout process
+2026-02-04 00:21:03.765 [main] INFO  org.main.selenium.reporting.Logger - Clicked finish button
+2026-02-04 00:21:37.494 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vipinpandey/Library/Caches/JetBrains/IntelliJIdea2025.3/temp-testng-customsuite.xml
+
+2026-02-04 00:21:37.996 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.109 (resolved driver for Chrome 144)
+2026-02-04 00:21:38.013 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/vipinpandey/.cache/selenium/chromedriver/mac-x64/144.0.7559.109/chromedriver
+2026-02-04 00:21:39.688 [main] INFO  org.main.selenium.reporting.Logger - Navigating to sauce Demo
+2026-02-04 00:21:40.120 [main] INFO  org.main.selenium.reporting.Logger - Attempting to login to Sauce Demo with username: standard_user
+2026-02-04 00:21:40.426 [main] INFO  org.main.selenium.reporting.Logger - Entered username
+2026-02-04 00:21:40.547 [main] INFO  org.main.selenium.reporting.Logger - Entered password
+2026-02-04 00:21:40.690 [main] INFO  org.main.selenium.reporting.Logger - Clicked login button
+2026-02-04 00:21:40.724 [main] INFO  org.main.selenium.reporting.Logger - Login verification successful
+2026-02-04 00:21:40.724 [main] INFO  org.main.selenium.reporting.Logger - Starting add to cart and checkout process
+2026-02-04 00:21:40.822 [main] INFO  org.main.selenium.reporting.Logger - Clicked on backpack product
+2026-02-04 00:21:40.905 [main] INFO  org.main.selenium.reporting.Logger - Added backpack to cart
+2026-02-04 00:21:40.923 [main] INFO  org.main.selenium.reporting.Logger - Cart badge displayed - item added successfully
+2026-02-04 00:21:40.996 [main] INFO  org.main.selenium.reporting.Logger - Navigated to cart page
+2026-02-04 00:21:41.072 [main] INFO  org.main.selenium.reporting.Logger - Clicked checkout button
+2026-02-04 00:21:41.156 [main] INFO  org.main.selenium.reporting.Logger - Entered first name
+2026-02-04 00:21:41.219 [main] INFO  org.main.selenium.reporting.Logger - Entered last name
+2026-02-04 00:21:41.283 [main] INFO  org.main.selenium.reporting.Logger - Entered postal code
+2026-02-04 00:21:41.366 [main] INFO  org.main.selenium.reporting.Logger - Clicked continue button
+2026-02-04 00:21:41.405 [main] INFO  org.main.selenium.reporting.Logger - Checkout overview page displayed
+2026-02-04 00:21:41.440 [main] INFO  org.main.selenium.reporting.Logger - Total price displayed: Total: $32.39
+2026-02-04 00:21:41.441 [main] INFO  org.main.selenium.reporting.Logger - Finishing checkout process
+2026-02-04 00:21:41.510 [main] INFO  org.main.selenium.reporting.Logger - Clicked finish button
+2026-02-04 00:21:53.347 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vipinpandey/Library/Caches/JetBrains/IntelliJIdea2025.3/temp-testng-customsuite.xml
+
+2026-02-04 00:21:53.814 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 144.0.7559.109 (resolved driver for Chrome 144)
+2026-02-04 00:21:53.835 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/vipinpandey/.cache/selenium/chromedriver/mac-x64/144.0.7559.109/chromedriver
+2026-02-04 00:21:55.385 [main] INFO  org.main.selenium.reporting.Logger - Navigating to sauce Demo
+2026-02-04 00:21:55.821 [main] INFO  org.main.selenium.reporting.Logger - Attempting to login to Sauce Demo with username: standard_user
+2026-02-04 00:21:56.108 [main] INFO  org.main.selenium.reporting.Logger - Entered username
+2026-02-04 00:21:56.229 [main] INFO  org.main.selenium.reporting.Logger - Entered password
+2026-02-04 00:21:56.363 [main] INFO  org.main.selenium.reporting.Logger - Clicked login button
+2026-02-04 00:21:56.401 [main] INFO  org.main.selenium.reporting.Logger - Login verification successful
+2026-02-04 00:21:56.407 [main] INFO  org.main.selenium.reporting.Logger - Navigating to sauce Demo
+2026-02-04 00:21:56.467 [main] INFO  org.main.selenium.reporting.Logger - Attempting to login to Sauce Demo with username: standard_user
+2026-02-04 00:21:56.607 [main] INFO  org.main.selenium.reporting.Logger - Entered username
+2026-02-04 00:21:56.706 [main] INFO  org.main.selenium.reporting.Logger - Entered password
+2026-02-04 00:21:56.815 [main] INFO  org.main.selenium.reporting.Logger - Clicked login button
+2026-02-04 00:21:56.830 [main] INFO  org.main.selenium.reporting.Logger - Login verification successful
+2026-02-04 00:21:56.830 [main] INFO  org.main.selenium.reporting.Logger - Starting add to cart and checkout process
+2026-02-04 00:21:56.916 [main] INFO  org.main.selenium.reporting.Logger - Clicked on backpack product
+2026-02-04 00:21:56.990 [main] INFO  org.main.selenium.reporting.Logger - Added backpack to cart
+2026-02-04 00:21:57.007 [main] INFO  org.main.selenium.reporting.Logger - Cart badge displayed - item added successfully
+2026-02-04 00:21:57.079 [main] INFO  org.main.selenium.reporting.Logger - Navigated to cart page
+2026-02-04 00:21:57.150 [main] INFO  org.main.selenium.reporting.Logger - Clicked checkout button
+2026-02-04 00:21:57.240 [main] INFO  org.main.selenium.reporting.Logger - Entered first name
+2026-02-04 00:21:57.304 [main] INFO  org.main.selenium.reporting.Logger - Entered last name
+2026-02-04 00:21:57.366 [main] INFO  org.main.selenium.reporting.Logger - Entered postal code
+2026-02-04 00:21:57.443 [main] INFO  org.main.selenium.reporting.Logger - Clicked continue button
+2026-02-04 00:21:57.476 [main] INFO  org.main.selenium.reporting.Logger - Checkout overview page displayed
+2026-02-04 00:21:57.508 [main] INFO  org.main.selenium.reporting.Logger - Total price displayed: Total: $32.39
+2026-02-04 00:21:57.509 [main] INFO  org.main.selenium.reporting.Logger - Finishing checkout process
+2026-02-04 00:21:57.582 [main] INFO  org.main.selenium.reporting.Logger - Clicked finish button
+2026-02-04 00:21:57.735 [main] INFO  org.main.selenium.reporting.Logger - Navigating to sauce Demo
+2026-02-04 00:21:57.786 [main] INFO  org.main.selenium.reporting.Logger - Attempting to login to Sauce Demo with username: standard_user
+2026-02-04 00:21:57.883 [main] INFO  org.main.selenium.reporting.Logger - Entered username
+2026-02-04 00:21:57.976 [main] INFO  org.main.selenium.reporting.Logger - Entered password
+2026-02-04 00:21:58.082 [main] INFO  org.main.selenium.reporting.Logger - Clicked login button
+2026-02-04 00:21:58.094 [main] INFO  org.main.selenium.reporting.Logger - Login verification successful
+2026-02-04 00:21:58.094 [main] INFO  org.main.selenium.reporting.Logger - Starting add to cart and checkout process
+2026-02-04 00:21:58.158 [main] INFO  org.main.selenium.reporting.Logger - Clicked on backpack product
+2026-02-04 00:21:58.220 [main] INFO  org.main.selenium.reporting.Logger - Added backpack to cart
+2026-02-04 00:21:58.233 [main] INFO  org.main.selenium.reporting.Logger - Cart badge displayed - item added successfully
+2026-02-04 00:21:58.292 [main] INFO  org.main.selenium.reporting.Logger - Navigated to cart page
+2026-02-04 00:21:58.351 [main] INFO  org.main.selenium.reporting.Logger - Clicked checkout button
+2026-02-04 00:21:58.427 [main] INFO  org.main.selenium.reporting.Logger - Entered first name
+2026-02-04 00:21:58.486 [main] INFO  org.main.selenium.reporting.Logger - Entered last name
+2026-02-04 00:21:58.550 [main] INFO  org.main.selenium.reporting.Logger - Entered postal code
+2026-02-04 00:21:58.616 [main] INFO  org.main.selenium.reporting.Logger - Clicked continue button
+2026-02-04 00:21:58.646 [main] INFO  org.main.selenium.reporting.Logger - Checkout overview page displayed
+2026-02-04 00:21:58.672 [main] INFO  org.main.selenium.reporting.Logger - Total price displayed: Total: $32.39
+2026-02-04 00:21:58.672 [main] INFO  org.main.selenium.reporting.Logger - Finishing checkout process
+2026-02-04 00:21:58.729 [main] INFO  org.main.selenium.reporting.Logger - Clicked finish button
