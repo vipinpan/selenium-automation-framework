@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  # Selenium Grid Hub
+  selenium-hub:
+    image: selenium/hub:4.15.0
+    container_name: selenium-hub
+    ports:
+      - "4444:4444"
+    environment:
+      - GRID_MAX_SESSION=16
+      - GRID_BROWSER_TIMEOUT=300
+      - GRID_TIMEOUT=300
+    networks:
+      - selenium-network
+
+  # Chrome Node
+  chrome-node:
+    image: selenium/node-chrome:4.15.0
+    container_name: chrome-node
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - NODE_MAX_SESSION=4
+      - NODE_MAX_INSTANCES=4
+    volumes:
+      - /dev/shm:/dev/shm
+    networks:
+      - selenium-network
+
+  # Firefox Node
+  firefox-node:
+    image: selenium/node-firefox:4.15.0
+    container_name: firefox-node
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - NODE_MAX_SESSION=4
+      - NODE_MAX_INSTANCES=4
+    volumes:
+      - /dev/shm:/dev/shm
+    networks:
+      - selenium-network
+
+  # Test Execution Service
+  test-runner:
+    build: .
+    container_name: test-runner
+    depends_on:
+      - selenium-hub
+      - chrome-node
+      - firefox-node
+    environment:
+      - SELENIUM_REMOTE_URL=http://selenium-hub:4444/wd/hub
+      - BROWSER=chrome
+      - MAVEN_OPTS=-Xmx2g
+    volumes:
+      - ./target:/app/target
+      - ./test-results:/app/test-results
+    networks:
+      - selenium-network
+    command: >
+      sh -c "
+        echo 'Waiting for Selenium Grid to be ready...' &&
+        curl -f http://selenium-hub:4444/wd/hub/status &&
+        echo 'Selenium Grid is ready!' &&
+        mvn clean test -Dbrowser=chrome -Dremote=true
+      "
+
+  # Allure Report Service (Optional)
+  allure-report:
+    image: frankescobar/allure-docker-service:latest
+    container_name: allure-report
+    environment:
+      - CHECK_RESULTS_EVERY_SECONDS=3
+      - KEEP_HISTORY=1
+    ports:
+      - "5050:5050"
+    volumes:
+      - ./target/allure-results:/app/allure-results
+      - ./target/allure-reports:/app/default-reports
+    networks:
+      - selenium-network
+
+networks:
+  selenium-network:
+    driver: bridge
+
+volumes:
+  test-results:
+    driver: local

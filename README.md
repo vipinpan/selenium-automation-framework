@@ -1,6 +1,16 @@
-# Selenium Automation Framework
+# 🚀 Selenium Automation Framework
 
-A comprehensive Selenium-based automation framework with data-driven testing, reporting, and logging capabilities.
+A comprehensive Selenium-based automation framework with data-driven testing, reporting, logging, and CI/CD pipeline capabilities.
+
+## 🌟 Features
+
+- **🧪 Automated Testing**: Cross-browser Selenium tests with Page Object Model
+- **📊 Advanced Reporting**: ExtentReports with screenshots and detailed logs
+- **🔄 CI/CD Pipeline**: GitHub Actions with Docker integration
+- **🐳 Container Support**: Docker Compose for consistent testing environments
+- **🔒 Security Scanning**: Automated vulnerability scanning with Trivy
+- **📱 Multi-Browser**: Chrome and Firefox support with headless options
+- **📈 Performance Monitoring**: Test execution metrics and optimization
 
 ## Framework Structure
 
@@ -30,6 +40,12 @@ SeleniumProject/
 │       └── resources/
 │           └── testdata/
 │               └── facebook_test_data.json # Test data in JSON format
+├── .github/
+│   └── workflows/
+│       └── ci.yml                          # GitHub Actions CI/CD pipeline
+├── docker-compose.yml                      # Docker services configuration
+├── Dockerfile                             # Container build configuration
+├── CI-CD-SETUP.md                         # Detailed CI/CD documentation
 ├── target/
 │   ├── reports/                            # ExtentReports HTML reports
 │   ├── screenshots/                        # Test failure screenshots
@@ -39,7 +55,83 @@ SeleniumProject/
 └── README.md                              # This file
 ```
 
-## Features
+## 🚀 Quick Start
+
+### Prerequisites
+- Java 11+ and Maven 3.6+
+- Docker & Docker Compose (for containerized testing)
+- Git
+
+### Local Setup
+```bash
+# Clone the repository
+git clone https://github.com/vipinpan/selenium-automation-framework.git
+cd selenium-automation-framework
+
+# Run tests locally
+mvn clean test
+
+# Run with Docker
+docker-compose up -d
+docker-compose exec test-runner mvn test
+```
+
+### CI/CD Pipeline
+The project includes a complete CI/CD pipeline that:
+- ✅ Runs tests on every push/PR
+- ✅ Tests across Chrome/Firefox and Java 11/17
+- ✅ Performs security scanning
+- ✅ Generates detailed reports
+- ✅ Deploys to staging on main branch
+
+## 🔄 CI/CD Pipeline
+
+### GitHub Actions Workflow
+- **Triggers**: Push to main/develop, PRs, daily schedule
+- **Matrix Testing**: 4 combinations (Chrome/Firefox × Java 11/17)
+- **Security**: Trivy vulnerability scanning
+- **Reporting**: Test artifacts, screenshots, PR comments
+
+### Docker Integration
+```bash
+# Start Selenium Grid
+docker-compose up -d selenium-hub chrome-node firefox-node
+
+# Run tests on grid
+mvn test -Dremote=true -Dgrid.url=http://localhost:4444/wd/hub
+
+# View Allure reports
+open http://localhost:5050
+```
+
+For detailed CI/CD setup, see [CI-CD-SETUP.md](CI-CD-SETUP.md).
+
+## 🧪 Test Execution
+
+### Local Testing
+```bash
+# Run all tests
+mvn clean test
+
+# Run specific test class
+mvn test -Dtest=SauceDemoTest
+
+# Run with specific browser
+mvn test -Dbrowser=firefox
+
+# Run with headless mode
+mvn test -Dbrowser.headless=true
+```
+
+### SauceDemo Tests
+The framework includes working SauceDemo tests:
+```bash
+# Run complete purchase flow
+mvn test -Dtest=SauceDemoTest#testCompletePurchaseFlow
+
+# Run all SauceDemo tests
+mvn test -Dtest=SauceDemoTest
+```
 
 ### ✅ Base Class Methods
 - **Element Interactions**: Click, sendKeys, getText, getAttribute
